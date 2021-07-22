@@ -50,11 +50,11 @@ function decideWinner(yourChoice, computerChoice) {
 
 function finalMessage([yourScore, computerScore]) {
     if(yourScore === 0.5) {
-        return {"message": "You tied!💻🤝👨", "color": "blue"}
+        return {"message": "You tied!💻🤝👨", "color": "darkblue"}
     } else if(yourScore === 1) {
-        return {"message": "You won!🥳😎", "color": "green"};
+        return {"message": "You won!🥳😎", "color": "darkgreen"};
     } else {
-        return {"message": "You loose!👨😔", "color": "red"};
+        return {"message": "You loose!👨😔", "color": "darkred"};
     }
 }
 
@@ -74,9 +74,9 @@ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage) {
     let botDiv = document.createElement("div");
     let messageDiv = document.createElement("div");
 
-    humanDiv.innerHTML = "<img src='" + imagesDatabase[humanImageChoice] + "' height = 150 width = 150 style='box-shadow: 0px 10px 50px rgba(37, 50, 233, 1)'>";
+    humanDiv.innerHTML = "<img src='" + imagesDatabase[humanImageChoice] + "' height = 150 width = 150>";
     messageDiv.innerHTML = "<h1 style='color: " + finalMessage['color'] + ";font-size: 50px; padding:30px'>" + finalMessage['message'] + "</h1>";
-    botDiv.innerHTML = "<img src='" + imagesDatabase[botImageChoice] + "' height = 150 width = 150 style='box-shadow: 0px 10px 50px rgba(243, 38, 24, 1)'>"
+    botDiv.innerHTML = "<img src='" + imagesDatabase[botImageChoice] + "' height = 150 width = 150>"
 
     document.getElementById("flex-box-rps-div").appendChild(humanDiv);
     document.getElementById("flex-box-rps-div").appendChild(messageDiv);
