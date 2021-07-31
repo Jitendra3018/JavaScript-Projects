@@ -1,21 +1,21 @@
-let all_buttons = document.getElementsByTagName('button');
+let all_buttons = document.getElementsByTagName("button");
 console.log(all_buttons);
 
 let copyAllButtons = [];
-for(let i = 0; i < all_buttons.length; i++) {
+for (let i = 0; i < all_buttons.length; i++) {
     copyAllButtons.push(all_buttons[i].classList[1]);
 }
 console.log(copyAllButtons);
 
 function buttonColorChange(buttonThingy) {
     console.log(buttonThingy.value);
-    if(buttonThingy.value === 'red') {
+    if (buttonThingy.value === "red") {
         buttonRed();
-    } else if(buttonThingy.value === 'green') {
+    } else if (buttonThingy.value === "green") {
         buttonGreen();
-    } else if(buttonThingy.value === 'reset') {
+    } else if (buttonThingy.value === "reset") {
         buttonReset();
-    } else if(buttonThingy.value === 'random') {
+    } else if (buttonThingy.value === "random") {
         buttonRandom();
     }
 }
@@ -42,8 +42,14 @@ function buttonReset() {
 }
 
 function buttonRandom() {
-    let choices = ['btn-primary', 'btn-danger', 'btn-warning', 'btn-success', 'btn-info'];
-    for(let i = 0; i < all_buttons.length; i++) {
+    let choices = [
+        "btn-primary",
+        "btn-danger",
+        "btn-warning",
+        "btn-success",
+        "btn-info",
+    ];
+    for (let i = 0; i < all_buttons.length; i++) {
         let randomNumber = Math.floor(Math.random() * 5);
         all_buttons[i].classList.remove(all_buttons[i].classList[1]);
         all_buttons[i].classList.add(choices[randomNumber]);
